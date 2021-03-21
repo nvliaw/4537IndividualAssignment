@@ -28,7 +28,7 @@ app.get("*", (req, res) => {
     });
 });
 
-app.get(endPointRoot + "/1", (req, res) => {
+app.get(endPointRoot + "/quotes/1", (req, res) => {
     console.log(req);
     connection.query("SELECT * FROM quote order by quoteid desc", (err, result) => {
         if (err) throw err;
