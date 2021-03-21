@@ -74,7 +74,7 @@ function displaySingleQuote() {
                     document.getElementById("loading").innerHTML = "No quotes stored in database.";
                 } else {
                     document.getElementById("loading").style.display = "none";
-                    quote = new Quote(rows[0].quoteText, rows[0].authorText);
+                    quote = new Quote(rows[rows.length - 1].quoteText, rows[rows.length - 1].authorText);
                     displayQuote(quote);
                 }
             }
